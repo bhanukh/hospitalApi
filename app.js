@@ -22,8 +22,12 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
+
 app.use('/', require('./routes/index'));
 
+app.get('/', (req,res)=>{
+    res.send("hello")
+})
 
 app.listen(port, function(err){
     if(err){
